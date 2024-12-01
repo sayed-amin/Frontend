@@ -1,21 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
 
-
-function App() {
-
+const App = () => {
   return (
-    <>
-     <h1 className="text-3xl font-bold underline font-extralight">
-      Hello world! alfkjdafldjadfljadflkjadf
-    </h1>
-    
-    <button type="button" class="bg-indigo-500 ..." disabled>
-  <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<h1>Dashboard</h1>} /> {/* Placeholder */}
+      </Routes>
+    </Router>
+  );
+};
 
-  </svg>
-  Processing...
-</button>
-    </>
-  )
-}
-
-export default App
+export default App;
