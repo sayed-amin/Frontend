@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+
+.head {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Headland One';
+}
+
+.noteList {
+    width: 97%;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.015);
+}
+
+.addNoteFab {
+    position: fixed !important;
+    z-index: 1 !important;
+    right: 5% !important;
+    background-color: hsl(180, 100%, 50%) !important;
+}
+
+.addNoteFab:hover {
+    background-color: hsl(180, 100%, 46%);
+}
+
+.adminModeFab {
+    position: fixed !important;
+    z-index: 1 !important;
+    right: 5% !important;
+    margin-top: 4.5rem !important;
+}
+
+.searchNoteFab {
+    position: fixed !important;
+    z-index: 1 !important;
+    right: 5% !important;
+    top: 9.3rem !important;
+    text-transform: capitalize !important;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 6rem;
+    width: 100%;
+
+    /* Making container scrollable */
+    overflow-y: scroll;
+    position: absolute;
+    top: 5rem;
+    height: calc(100vh - 5rem);
+    max-height: calc(100vh - 5rem);
+}
+
+.ncLabel {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: justify;
+}
+
+.ncLabel>span {
+    color: var(--medium-difficulty);
+    font-size: 1rem;
+    padding: 0px 2px;
+    font-family: 'Headland One';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.noteList>.noNote {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 4px;
+    font-family: 'Headland One';
+}
+
+.noteList>.noNote>button {
+    border: unset;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    color: blue;
+}
+
+.ncLabel>.red,
+.noteList>.red {
+    color: var(--hard-difficulty);
+}
+
+@media (max-width:620px) {
+    .noteList {
+        justify-content: center;
+    }
+}

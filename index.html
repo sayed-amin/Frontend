@@ -1,13 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.jpeg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeForge</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Online Judge | Online Coding Platform" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/code.png" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/code.png" />
+    
+    <!-- Manifest File -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <title>Online Judge</title>
   </head>
   <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- This div is where React will mount -->
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Vite's script import (entry point) -->
+    <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>
