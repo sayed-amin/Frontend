@@ -6,7 +6,7 @@ import { v4 } from 'uuid';
 import io from 'socket.io-client';
 import { SERVER_LINK } from '../../dev-server-link';
 import './ServerLogs.css';
-import LoadingSpinner from '../../compenents/LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from './../../compenents/LoadingSpinner/LoadingSpinner';
 
 const ServerLogs = () => {
 
