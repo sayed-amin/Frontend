@@ -61,7 +61,7 @@ const ExtraMenu = ({ setExpand }) => {
                     <Note sx={{ marginRight: '8px', color: "#EAEAEA" }} />
                     Notes
                 </MenuItem>
-                <MenuItem onClick={() => dispatch(messageActions.set({ type: 'info', message: 'Typing Learner: A project to boost typing speed!' }))} sx={menuItemStyle}>
+                <MenuItem onClick={() => dispatch(messageActions.set({ type: 'info', message: 'Typing Learner: A project to boost typing speed! (In development)' }))} sx={menuItemStyle}>
                     <Share sx={{ marginRight: '8px', color: "#EAEAEA" }} />
                     TypeMaster
                 </MenuItem>
