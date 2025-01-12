@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Shadows+Into+Light+Two&display=swap');
+
+:root {
+    --primary-color: #222; /* Dark text color */
+    --error-color: #c61818;
+    --form-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --font-family-serif: 'Headland One', serif;
+    --font-family-cursive: 'Shadows Into Light Two', cursive;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 .bgImg {
     position: fixed;
     top: 0;
@@ -16,45 +33,69 @@
     align-items: center;
     width: 100vw;
     min-height: 100vh;
-    margin-bottom: 2rem;
+    padding: 1rem; /* Adds space for smaller screens */
+    box-sizing: border-box;
 }
 
 .Auth-form {
-    width: 420px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
-    padding-top: 30px;
-    padding-bottom: 20px;
+    max-width: 420px;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--form-bg);
     border-radius: 8px;
-    background-color: white;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.Auth-form:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .Auth-form-content {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding: 0 10%;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
 
 .Auth-form-title {
     text-align: center;
-    margin-bottom: 0.8em;
+    margin-bottom: 1rem;
     font-size: 2rem;
-    color: rgb(34, 34, 34);
-    font-weight: 900 !important;
-    font-family: 'Headland One', serif;
+    color: var(--primary-color);
+    font-weight: 900;
+    font-family: var(--font-family-serif);
+}
+
+input, button {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus, button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .errormsg {
-    color: #c61818;
+    color: var(--error-color);
     font-weight: 600;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     padding-bottom: 0.3rem;
     letter-spacing: 0.02em;
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
 }
 
 .validError {
-    color: #c61818;
+    color: var(--error-color);
     font-size: 0.8rem;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: var(--font-family-cursive);
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .Auth-form {
+        padding: 1.5rem;
+    }
+
+    .Auth-form-title {
+        font-size: 1.8rem;
+    }
 }

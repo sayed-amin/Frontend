@@ -3,14 +3,16 @@ import React, { Fragment } from 'react'
 import AceEditor from 'react-ace'
 
 import 'ace-builds/src-noconflict/ace';
+import 'ace-builds/src-noconflict/theme-monokai';
 import 'ace-builds/src-noconflict/ext-language_tools';
+
 
 const loadAceModules = async () => {
     await import('ace-builds/src-noconflict/mode-javascript');
     await import('ace-builds/src-noconflict/mode-c_cpp');
     await import('ace-builds/src-noconflict/mode-java');
     await import('ace-builds/src-noconflict/mode-python');
-    await import('ace-builds/src-noconflict/theme-monokai');
+  //  await import('ace-builds/src-noconflict/theme-monokai');
 };
 
 loadAceModules();

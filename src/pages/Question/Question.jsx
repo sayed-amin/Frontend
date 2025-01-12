@@ -33,7 +33,6 @@ const Question = () => {
     const [response, setResponse] = useState([]);
 
     const endRef = useRef(null);
-    console.log('Selected Language:', selectedLang);
 
     const submitHandler = async event => {
         event.preventDefault();
@@ -106,8 +105,7 @@ const Question = () => {
             setResponse({ msg: 'caught errors while sending code to server for getting verdict', serverError: JSON.stringify(error) });
             setcodeSubmittingState('submitted');
         }
-        console.log('Selected Language:', selectedLang);
-        console.log('Default Codes:', defaultCodes);
+        
     }
    
     

@@ -1,4 +1,37 @@
-.logos {
-    margin: 0.4rem 1.5rem 0.4rem 0;
-    cursor: pointer;
+/** @format */
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  margin: 0 1rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #555;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.logo:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.footerText {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.link {
+  text-decoration: none;
+  color: #0073b1; /* LinkedIn Blue */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #005582;
 }
