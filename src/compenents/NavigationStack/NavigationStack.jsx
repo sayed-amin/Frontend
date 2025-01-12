@@ -13,7 +13,6 @@ const Codes = React.lazy(() => import('../../pages/Codes/Codes'));
 const NotFound = React.lazy(() => import('../../pages/NotFound/NotFound'));
 const DashBoard = React.lazy(() => import('../../pages/DashBoard/DashBoard'));
 const Account = React.lazy(() => import('../../pages/Account/Account'));
-const LinkShortner = React.lazy(() => import('../../pages/LinkShortner/LinkShortner'));
 const Notes = React.lazy(() => import('../../pages/Notes/Notes'));
 const ServerLogs = React.lazy(() => import('../../pages/ServerLogs/ServerLogs'));
 const CustomForm = React.lazy(() => import('../Customform/Customform'));
@@ -75,9 +74,7 @@ const NavigationStack = () => {
                     {/* Additional Features */}
                     <Route path={ROUTES.CODES} element={<Codes />} />
                     <Route path={ROUTES.NOTES} element={<Notes />} />
-                    <Route path={ROUTES.LINK_SHORTENER} element={<LinkShortner />} />
                     <Route path={ROUTES.SERVER_LOGS} element={<ServerLogs />} />
-
                     {/* Fallback Route */}
                     <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
                 </Routes>

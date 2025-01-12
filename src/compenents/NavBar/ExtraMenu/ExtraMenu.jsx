@@ -61,13 +61,13 @@ const ExtraMenu = ({ setExpand }) => {
                     <Note sx={{ marginRight: '8px', color: "#EAEAEA" }} />
                     Notes
                 </MenuItem>
-                <MenuItem onClick={() => dispatch(messageActions.set({ type: 'warning', message: 'This feature is not available yet!' }))} sx={menuItemStyle}>
+                <MenuItem onClick={() => dispatch(messageActions.set({ type: 'info', message: 'Typing Learner: A project to boost typing speed!' }))} sx={menuItemStyle}>
                     <Share sx={{ marginRight: '8px', color: "#EAEAEA" }} />
-                    Get Short Link
+                    TypeMaster
                 </MenuItem>
-                <MenuItem onClick={() => navigate('/linkShortner')} sx={menuItemStyle}>
+                <MenuItem onClick={() => window.open('https://sayedamin.in', '_blank')} sx={menuItemStyle}>
                     <Link sx={{ marginRight: '8px', color: "#EAEAEA" }} />
-                    Link Shortener
+                    Portfolio
                 </MenuItem>
                 <MenuItem onClick={() => navigate('/serverLogs')} sx={menuItemStyle}>
                     <Description sx={{ marginRight: '8px', color: "#EAEAEA" }} />
