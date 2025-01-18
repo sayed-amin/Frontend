@@ -6,7 +6,10 @@ import 'ace-builds/src-noconflict/ace';
 import 'ace-builds/src-noconflict/theme-monokai';
 import 'ace-builds/src-noconflict/ext-language_tools';
 
-
+await import('ace-builds/src-noconflict/mode-javascript');
+await import('ace-builds/src-noconflict/mode-c_cpp');
+await import('ace-builds/src-noconflict/mode-java');
+await import('ace-builds/src-noconflict/mode-python');
 const loadAceModules = async () => {
     await import('ace-builds/src-noconflict/mode-javascript');
     await import('ace-builds/src-noconflict/mode-c_cpp');

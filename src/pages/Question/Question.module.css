@@ -1,5 +1,6 @@
 /** @format */
 
+@import url("https://fonts.googleapis.com/css2?family=Headland+One&display=swap");
 .contain {
   margin-bottom: 15rem;
 }
@@ -28,7 +29,6 @@
   margin: 0.7rem 3rem 2rem 3rem;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Headland+One&display=swap");
 
 .heading {
   font-size: 3em;
@@ -187,8 +187,8 @@
 }
 
 .spin {
-  padding-left: 0.5em;
   display: inline-block;
+  margin-left: 0.5em;
 }
 
 .spin:after {
@@ -199,22 +199,19 @@
   border-radius: 50%;
   border: 0.2rem solid hsl(180, 100%, 40%);
   border-color: hsl(180, 100%, 40%) transparent hsl(180, 100%, 40%) transparent;
-  animation: spinner 1s ease-in-out infinite;
+  animation: spinner 0.8s linear infinite;
 }
 
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
   }
-
-  50% {
+  100% {
     transform: rotate(360deg);
   }
-
-  100% {
-    transform: rotate(0deg);
-  }
 }
+
+
 
 @font-face {
   font-family: SFMono;
@@ -298,4 +295,66 @@
 
 .response :last-child {
   border-bottom: unset;
+}
+
+
+.runBtn {
+  padding: 0.7rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: hsl(180, 100%, 40%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.runBtn:hover {
+  background-color: hsl(180, 100%, 30%);
+}
+
+.runBtn:active {
+  background-color: hsl(180, 100%, 20%);
+}
+
+
+.textarea {
+  width: 100%; /* Ensures it takes full available width */
+  min-height: 150px; /* Increased initial height */
+  max-width: 800px; /* Allows a wider textarea */
+  padding: 12px;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: #fff;
+  outline: none;
+  resize: both; /* Allows both horizontal & vertical resizing */
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin-bottom: 30px; /* More space between textarea & buttons */
+}
+
+.textarea:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.7);
+}
+
+.textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Adjust button container for better spacing */
+.buttonContainer {
+  display: flex;
+  gap: 2em; /* More spacing between Run & Submit buttons */
+  margin-top: 20px; /* More space between textarea & buttons */
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
 }

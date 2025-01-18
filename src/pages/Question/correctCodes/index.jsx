@@ -1,6 +1,15 @@
-import bs0 from "./bs0";
-
-
+import SortedBinaryArrayTestcase from "./SortedBinaryArrayTestcase";
+import DirectBinarySearchTestcase from "./DirectBinarySearchTestcase";
+import WaysOfJumpTestcase from "./WaysOfJumpTestcase";
+import SphinxRangeSumsTestcase from "./SphinxRangeSumsTestcase";
+import PalindromeSubseqTestcase from "./PalindromeSubseqTestcase"
+import LCS2Testcase from "./LCS2Testcase"
+import CountVowelsTestcase from "./CountVowelsTestcase"
+import FactorialTestcase from "./FactorialTestcase"
+import ReverseStringTestcase from "./ReverseStringTestcase"
+import RangeSearchQueriesTestcase from "./RangeSearchQueriesTestcase"
+import LCSTestcase from "./LCSTestcase"
 export const correctCode = {
-    bs0
+    SortedBinaryArrayTestcase,DirectBinarySearchTestcase,WaysOfJumpTestcase,SphinxRangeSumsTestcase,WaysOfJumpTestcase,LCS2Testcase,PalindromeSubseqTestcase,CountVowelsTestcase,FactorialTestcase,ReverseStringTestcase,RangeSearchQueriesTestcase,LCSTestcase
+
 }
