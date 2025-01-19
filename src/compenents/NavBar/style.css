@@ -3,8 +3,9 @@
 
 @font-face {
     font-family: 'NexaRust';
-    src: url('../../assets/fonts/NexaRustHandmade-Extended.otf');
+    src: url('/fonts/NexaRustHandmade-Extended.otf');
 }
+
 
 /* Navigation Bar Font */
 .navfontfamily {

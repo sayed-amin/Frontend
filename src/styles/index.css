@@ -1,7 +1,7 @@
 /* Import Font */
 @font-face {
     font-family: 'gotham';
-    src: url('./assets/fonts/gotham-medium.woff2') format('woff2');
+    src: url('/fonts/gotham-medium.woff2') format('woff2');
   }
   
   /* Root Variables */
