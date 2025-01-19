@@ -4,16 +4,17 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['ace-builds'],
+    include: ['ace-builds', 'uuid'], 
   },
   build: {
-    sourcemap: true, // Add this line to enable source maps
+    sourcemap: true, 
     rollupOptions: {
       output: {
         manualChunks: {
           ace: ['ace-builds'],
         },
       },
+      external: ['uuid'], 
     },
   },
 });
