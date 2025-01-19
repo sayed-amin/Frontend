@@ -6,6 +6,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ['ace-builds', 'uuid'], 
   },
+  
   build: {
     sourcemap: true, 
     rollupOptions: {
@@ -16,5 +17,8 @@ export default defineConfig({
       },
       external: ['uuid'], 
     },
+    target: 'esnext', // Use the latest version of JavaScript that supports top-level await
   },
+
+  assetsInclude: ['**/*.woff2', '**/*.otf'], // Include font files for bundling
 });

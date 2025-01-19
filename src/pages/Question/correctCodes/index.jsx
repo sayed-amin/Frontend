@@ -10,6 +10,6 @@ import ReverseStringTestcase from "./ReverseStringTestcase"
 import RangeSearchQueriesTestcase from "./RangeSearchQueriesTestcase"
 import LCSTestcase from "./LCSTestcase"
 export const correctCode = {
-    SortedBinaryArrayTestcase,DirectBinarySearchTestcase,WaysOfJumpTestcase,SphinxRangeSumsTestcase,WaysOfJumpTestcase,LCS2Testcase,PalindromeSubseqTestcase,CountVowelsTestcase,FactorialTestcase,ReverseStringTestcase,RangeSearchQueriesTestcase,LCSTestcase
+    SortedBinaryArrayTestcase,DirectBinarySearchTestcase,SphinxRangeSumsTestcase,WaysOfJumpTestcase,LCS2Testcase,PalindromeSubseqTestcase,CountVowelsTestcase,FactorialTestcase,ReverseStringTestcase,RangeSearchQueriesTestcase,LCSTestcase
 
 }
