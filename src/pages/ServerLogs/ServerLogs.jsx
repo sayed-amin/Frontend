@@ -2,7 +2,9 @@ import React, { useState, useEffect, Fragment, useRef } from 'react'
 import { useSelector } from 'react-redux';
 import { Button, Fab, Paper, Box } from '@mui/material';
 import { KeyboardArrowDown, KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight, Visibility } from '@mui/icons-material';
-import { v4 as uuidv4 } from 'uuid';
+//import { v4 as uuidv4 } from 'uuid';
+// const { v4: uuidv4 } = require('uuid');
+
 import io from 'socket.io-client';
 import { SERVER_LINK } from '../../dev-server-link';
 import './ServerLogs.css';
@@ -63,12 +65,12 @@ const useServerLogsSocket = (setStdout, setStderr) => {
     const loginState = useSelector(state => state.auth);
     useEffect(() => {
         if (!loginState.isAdmin) return;
-        const newSocket = io(SERVER_LINK, { query: { id: v4() } });
+        const newSocket = io(SERVER_LINK, { query: { id: Date.now() } });
         newSocket.on('logger-new-log', msg => {
-            setStdout(prev => [...prev, { msg, id: v4() }])
+            setStdout(prev => [...prev, { msg, id: Date.now() }])
         });
         newSocket.on('logger-new-error', msg => {
-            setStderr(prev => [...prev, { msg, id: v4() }])
+            setStderr(prev => [...prev, { msg, id: Date.now() }])
         });
         return () => newSocket.close();
     }, [loginState.username, loginState.isAdmin, setStdout, setStderr]);
@@ -94,8 +96,8 @@ const useFetchServerLogs = (setLoading, setError, setStderr, setStdout, pageNo) 
                 return await Promise.reject(json);
             })
             .then(res => {
-                setStdout(res.stdoutTxt.trim().split('\n').map(txt => ({ msg: txt, id: v4() })));
-                setStderr(res.stderrTxt.trim().split('\n').map(txt => ({ msg: txt, id: v4() })));
+                setStdout(res.stdoutTxt.trim().split('\n').map(txt => ({ msg: txt, id: Date.now() })));
+                setStderr(res.stderrTxt.trim().split('\n').map(txt => ({ msg: txt, id: Date.now() })));
             })
             .catch(setError)
             .finally(() => setLoading(false))
