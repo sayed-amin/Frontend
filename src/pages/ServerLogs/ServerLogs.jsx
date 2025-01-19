@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment, useRef } from 'react'
 import { useSelector } from 'react-redux';
 import { Button, Fab, Paper, Box } from '@mui/material';
 import { KeyboardArrowDown, KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight, Visibility } from '@mui/icons-material';
-import { v4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import io from 'socket.io-client';
 import { SERVER_LINK } from '../../dev-server-link';
 import './ServerLogs.css';
