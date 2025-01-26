@@ -14,7 +14,7 @@ import Message from './compenents/Message/Message';
 import { messageActions } from './store/Message/message-slice'
 import FooterFAB from './compenents/FooterFAB/FooterFAB';
 import NavigationStack from './compenents/NavigationStack/NavigationStack';
-
+import { Analytics } from '@vercel/analytics/react';
 const App = () => {
 
     const dispatch = useDispatch();
@@ -36,6 +36,7 @@ const App = () => {
             <FooterFAB />
             <ScrollToTop />
             <NavigationStack />
+            <Analytics />
         </div>
     );
 }
